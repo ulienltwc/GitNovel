@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import { pink } from '@mui/material/colors';
+import Header from './components/Header';
+import RogIn from './components/RogIn';
+import SignIn from './components/SignIn';
+import TopPage from './components/TopPage';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      mode: 'light',
+       primary: {
+         main: '#FD91AB',
+         light: '#ffa2a3',
+         dark: '#d6565c'
+        }
+      }  
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+        <Route path="/" element={<TopPage />} />
+        <Route path="/RogIn" element={<RogIn />} />
+        <Route path="/SignIn" element={<SignIn />} />
+        </Routes>
+      </div>
+    </Router>
+    </ThemeProvider>
+
+    
   );
 }
 
