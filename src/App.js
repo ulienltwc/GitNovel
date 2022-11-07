@@ -1,8 +1,6 @@
 import './App.css';
-import { pink } from '@mui/material/colors';
 import Header from './components/Header';
 import RogIn from './components/RogIn';
-import SignIn from './components/SignIn';
 import TopPage from './components/TopPage';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider, createTheme } from '@mui/material/styles'
@@ -27,7 +25,6 @@ function App() {
         <Routes>
         <Route path="/" element={<TopPage />} />
         <Route path="/RogIn" element={<RogIn />} />
-        <Route path="/SignIn" element={<SignIn />} />
         </Routes>
       </div>
     </Router>
