@@ -1,41 +1,72 @@
 import React from 'react'
 import { css } from '@emotion/css'
 import { ChakraProvider } from '@chakra-ui/react'
-
-
-
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from '@chakra-ui/react'
+import SearchBar from './SeachBar';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import { Input } from '@chakra-ui/react'
+import { IconButton } from '@chakra-ui/react'
+import { Grid, GridItem } from '@chakra-ui/react'
+import { Wrap, WrapItem } from '@chakra-ui/react'
 
 const logo = css`
-  display: block;
-    margin-left: auto;
-    margin-right: auto
+text-align: center;
+`
+
+const logoImg = css`
+`
+
+const top = css`
+  text-align: center;
 `
 const searchBox = css`
   background-color: #ffffff;
-  align-items: center;
   justify-content: center;
-  margin-right: 20%;
-  margin-left: 20%;
-  border-radius: 20px;
-  border: #555;
-  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
 `
 
-const searchIcon = css`
-  margin-top: 2%;
-  margin-bottom: 1%;
-  margin-left: 3%;
+const search = css`
+  text-align: center;
+
+`
+const searchForm = css`
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;	
+  outline: 0;	
+  height: 50px;
+  width: 50%;
+  padding: 20px; 
+  border-radius: 2px;
+  background: #eee;
+  border: 1px #555 solid;
+
 `
 
 
 const TopPage = () => {
+
+  
   return (
     
-    <div>
-      <img className={logo} src="https://3.bp.blogspot.com/-FJiaJ8gidCs/Ugsu-rSFw0I/AAAAAAAAXNA/JFiIUoxggW4/s400/book_tate.png" alt="GirNovel"></img>
-      <a></a>
+    <div className={top}>
+      <p className={logo}>
+        <img  className={logoImg} src="https://pbs.twimg.com/profile_banners/1026855715019747328/1652114248/1500x500" alt="GirNovel"></img>
+      </p>
       <br />
-      <a href='./SignIn'>SignIn</a>
+      <p>
+      <form id="form5" action="" className={searchBox}>
+        <input id="serch" type="text" placeholder="検索" className={searchForm} />
+      </form>
+      </p>
     </div> 
   )
 }
