@@ -25,7 +25,9 @@ const main = css`
     grid-column: 2/5;
     grid-row: 1
 `
-
+const tabL = css`
+    
+`
 
 const MyAccount = () => {
   return (
@@ -40,10 +42,10 @@ const MyAccount = () => {
         </div>
         <div className={main}>
             メインコンテンツ（この中を区切る）
-            <Tabs variant='soft-rounded' colorScheme='pink'>
-                <TabList>
-                    <Tab>Tab 1</Tab>
-                    <Tab>Tab 2</Tab>
+            <Tabs variant='soft-rounded' colorScheme='brand'>
+                <TabList className={tabL}>
+                    <Tab>公開作品</Tab>
+                    <Tab>非公開作品</Tab>
                 </TabList>
                 <TabPanels>
                     <TabPanel>
