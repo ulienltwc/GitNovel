@@ -5,6 +5,9 @@ import { Box } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 import { Stack, HStack, VStack } from '@chakra-ui/react'
 
+import MyAccount from './MyAccount'
+
+
 const box = css`
   display: flexbox;
   justify-content: center;
@@ -60,6 +63,10 @@ const TopPage = () => {
               placeholder='検索'
             />
           </Stack>
+        </Box>
+        <Box> {//開発段階でページ開く用。後で消す。
+        }
+          <a href='/MyAccount'>MyAccount</a>
         </Box>
       
     </div> 
