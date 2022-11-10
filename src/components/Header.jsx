@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/css'
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 const header = css`
 display: flex;
@@ -45,6 +46,9 @@ const Header = () => {
   <header className={header}>
     <div className={logo}>
       <img src='#' alt="ロゴ"></img>
+    </div>
+    <div>
+      <SearchBar />
     </div>
     <nav className={headerButton}>
         <ul>

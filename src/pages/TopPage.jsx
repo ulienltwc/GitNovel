@@ -4,8 +4,7 @@ import { ChakraProvider, cssVar } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 import { Stack, HStack, VStack } from '@chakra-ui/react'
-
-import MyAccount from './MyAccount'
+import SearchBar from '../components/SearchBar'
 
 
 const box = css`
@@ -33,20 +32,11 @@ const img = css`
   margin-right: auto;
 `
 const search = css`
+  border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   width: 600px;
-`
-const searchForm = css`
-  &:focus {
-    background-color: #ffceda;
-    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
-  }
-  
-  border-radius: 3px;
-  margin-top: 10px;
-  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
 `
 
 
@@ -58,16 +48,12 @@ const TopPage = () => {
           <img className={img} src="https://bit.ly/3teQMUw" alt="GirNovel"></img>
         </Box>
         <Box className={search}>
-          <Stack spacing={3}>
-            <Input className={searchForm}
-              focusBorderColor='#FD91AB'
-              placeholder='検索'
-            />
-          </Stack>
+          <SearchBar />
         </Box>
         <Box> {//開発段階でページ開く用。後で消す。
         }
-          <a href='/MyAccount'>MyAccount</a>
+          <a href='/MyAccount'>MyAccount</a><br />
+          <a href='/SearchResult'>検索結果</a>
         </Box>
       
     </div> 

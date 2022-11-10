@@ -3,7 +3,7 @@ import { css } from '@emotion/css'
 import { Box } from '@chakra-ui/react'
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
 import { Wrap, WrapItem } from '@chakra-ui/react'
-import  WorkNovel from './WorkNovel'
+import  WorkNovel from '../components/WorkNovel'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 const largeBox = css`
