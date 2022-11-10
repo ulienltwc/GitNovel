@@ -33,9 +33,10 @@ const img = css`
   margin-right: auto;
 `
 const search = css`
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
+  width: 600px;
 `
 const searchForm = css`
   &:focus {

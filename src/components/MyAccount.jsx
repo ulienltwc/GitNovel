@@ -10,6 +10,7 @@ const largeBox = css`
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
+    margin-top: 80px;
     margin-left: 10%;
     margin-right: 10%;
 `
@@ -48,8 +49,11 @@ const MyAccount = () => {
                     <Tab>非公開作品</Tab>
                 </TabList>
                 <TabPanels>
-                    <TabPanel>
-                    <p>one!</p>
+                    <TabPanel>{//JavaScriptでDBの内容を表示→要素の分だけ繰り返す？
+                    }
+                     <a href=''>
+                        <Box>作品を表示する箱</Box>
+                     </a>
                     </TabPanel>
                     <TabPanel>
                     <p>two!</p>
