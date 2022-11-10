@@ -4,16 +4,8 @@ import './index.css';
 import App from './App';
 import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from "@chakra-ui/react"
+import theme from "./Theme";
 
-const theme = extendTheme({
-  colors:{ 
-    brand: {
-      100: "#FD91AB",
-    },
-  },
-  fonts: {
-  },
-})
 
 
 
